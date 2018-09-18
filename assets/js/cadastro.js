@@ -1,7 +1,7 @@
 function confirmaSalvar() {
-    return confirm("Deseja SALVAR?");
+    return confirm('Deseja Salvar?');
 }
 
-function confirmaLimpar() {
-    return confirm("Deseja LIMPAR?");
+function confirmaRemover() {
+    return confirm('Deseja Apagar?');
 }

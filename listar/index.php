@@ -71,9 +71,9 @@ $clientes = $clienteDAO->findAll();
        <td><?=$cliente->getCidade()->getNome();?></td>
        <td><?=$cliente->getUnidadeFederativa()->getSigla();?></td>
       <td>
-          <form method="get" id="editar">
+          <form method="get" id="editar" action="../cadastro/index.php">
             <input type="hidden" name="id" value="<?=$cliente->getId();?>">
-            <button type="submit" class="btn btn-sm btn-primary" name="editar" value="editar" ><i class="fas fa-edit"></i></button>
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
           </form>
       </td>
       <td>
@@ -90,4 +90,5 @@ $clientes = $clienteDAO->findAll();
 </div>
 </div>
 </body>
+<script src="../assets/js/cadastro.js"></script>
 </html>

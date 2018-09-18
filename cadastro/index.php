@@ -14,6 +14,10 @@ $cliente = new Cliente();
 $clienteDAO = new ClienteDAO();
 $sexoDAO = new SexoDAO();
 
+if (isset($_GET['id'])) {
+  $cliente = $clienteDAO->findById($_GET['id']);
+}
+
 
 if (isset($_POST['salvar']) && $_POST['salvar'] == 'salvar') {
   $cliente->setId($_POST['id']);
@@ -149,7 +153,7 @@ $ufs = $ufdao->findAll();
     </div>
      <div class="form-group"><!--Butões-->
     <input type="submit" class="btn btn-primary" name="salvar" value="salvar" onclick="return confirmaSalvar();">
-    <input type="submit" class="btn btn-danger" name="limpar" value="limpar"onclick="return confirmaRemover();">
+    <input type="submit" class="btn btn-danger" name="limpar" value="limpar"onclick="return confirmaLimpar();">
 </div>
 </form><!--Fim do Formulario-->
 </div> <!--Fim do container -->
