@@ -152,7 +152,7 @@ $ufs = $ufdao->findAll();
     </div>
     </div>
      <div class="form-group"><!--Butões-->
-    <input type="submit" class="btn btn-primary" name="salvar" value="salvar" onclick="return confirmaSalvar();">
+    <input type="submit" class="btn btn-primary" name="salvar" value="Salvar" onclick="return confirmaSalvar();"> 
     <input type="submit" class="btn btn-danger" name="limpar" value="limpar"onclick="return confirmaLimpar();">
 </div>
 </form><!--Fim do Formulario-->
