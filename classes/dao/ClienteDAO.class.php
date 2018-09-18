@@ -77,7 +77,7 @@ class ClienteDAO {
             $statement->bindParam(':sobrenome', $sobrenome);
             $statement->bindParam(':nascimento', $nascimento);
             $statement->bindParam(':cpf', $cpf);
-           $statement->bindParam(':sexo', $sexo);
+            $statement->bindParam(':sexo', $sexo);
             $statement->bindParam(':cep', $cep);
             $statement->bindParam(':logradouro', $logradouro);
             $statement->bindParam(':observacoes', $observacoes);
