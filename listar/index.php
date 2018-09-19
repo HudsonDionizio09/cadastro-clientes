@@ -6,7 +6,7 @@ $clienteDAO = new ClienteDAO();
 
 if (isset($_GET['editar']) && $_GET['editar'] == 'editar') {
   $cliente = $clienteDAO->findById($_GET['id']);
-  var_dump($cliente);
+  
 }
 if (isset($_POST['remover']) && $_POST['remover'] == 'remover') {
   $clienteDAO->remove($_POST['id']);

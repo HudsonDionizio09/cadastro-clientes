@@ -4,13 +4,15 @@ require_once(__DIR__ . "/../modelo/Sexo.class.php");
 require_once(__DIR__ . "/../modelo/Bairro.class.php");
 require_once(__DIR__ . "/../modelo/Cidade.class.php");
 require_once(__DIR__ . "/../modelo/UnidadeFederativa.class.php");
+
+
 class ClienteDAO {
     
     private $conexao;
     function __construct() {
         $this->conexao = Conexao::get();
     }
-    private function insert(Cliente $cliente) {
+    public function insert(Cliente $cliente) {
 
         try {
 
@@ -95,7 +97,7 @@ class ClienteDAO {
     
     public function save(Cliente $cliente) {
         echo $cliente->getId();
-        if (empty($cliente->getId())) {
+        if (is_null($cliente->getId())) {
             return $this->insert($cliente);
         } else {
             return $this->update($cliente);

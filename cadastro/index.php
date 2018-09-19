@@ -15,7 +15,7 @@ $clienteDAO = new ClienteDAO();
 $sexoDAO = new SexoDAO();
 
 if (isset($_GET['id'])) {
-  $cliente = $clienteDAO->findById($_GET['id']);
+ $cliente = $clienteDAO->findById($_GET['id']);
 }
 
 
@@ -33,12 +33,12 @@ if (isset($_POST['salvar']) && $_POST['salvar'] == 'salvar') {
   $cliente->setEmail($_POST['email']);
 
   $clienteDAO->save($cliente);
-  //var_dump($cliente);
+ //var_dump($cliente);
   if ($cliente->getId() == 0) {
      $cliente->setId(null);
   }
   if ($_POST['id'] != '') {
-      $cliente->setId($_POST['ID']);
+      $cliente->setId($_POST['id']);
   }
 
   header('location: index.php');
@@ -152,8 +152,8 @@ $ufs = $ufdao->findAll();
     </div>
     </div>
      <div class="form-group"><!--Butões-->
-    <input type="submit" class="btn btn-primary" name="salvar" value="Salvar" onclick="return confirmaSalvar();"> 
-    <input type="submit" class="btn btn-danger" name="limpar" value="Limpar">
+    <input type="submit" class="btn btn-primary" name="salvar" value="salvar" onclick="return confirmaSalvar();"> 
+    <input type="submit" class="btn btn-danger" name="limpar" value="limpar">
 </div>
 </form><!--Fim do Formulario-->
 </div> <!--Fim do container -->
